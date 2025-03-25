@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffefd5; /* Fondo de color pastel */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido al inicio verticalmente */
+    height: 100vh;
+    margin: 0;
+    padding: 20px; /* Agrega padding para que el botón no toque los bordes */
+}
+
+/* Estilo para el header */
+header {
+    position: absolute;
+    top: 20px; /* Ajusta la posición desde arriba */
+    left: 20px; /* Ajusta la posición desde la izquierda */
+    font-size: 24px; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Convierte las palabras en negrita */
+    color: #333; /* Color del texto */
+}
+
+/* Contenedor del acordeón */
+.acordeon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px; /* Deja una obvia separación por encima */
+}
+
+.item {
+    border-right: 1px solid #ddd;
+    flex: 1;
+}
+
+.item:last-child {
+    border-right: none;
+}
+
+.title {
+    display: block;
+    padding: 15px;
+    font-size: 18px; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Convierte las palabras en negrita */
+    background: #70cfdb; /* Color pastel suave para los botones del menú */
+    color: #333;
+    text-align: center; /* Centra el contenido del menú */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.title:hover {
+    background: #8dd1e7; /* Color pastel más oscuro al pasar el ratón */
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #e6e6fa; /* Color pastel suave para el fondo del submenú */
+    padding: 0 15px;
+}
+
+.content p {
+    padding: 15px 0;
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    text-align: center; /* Centra el contenido del submenú */
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .content {
+    max-height: 100px; /* Ajusta este valor según el contenido */
+}

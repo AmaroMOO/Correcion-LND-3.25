@@ -1,0 +1,73 @@
+#primary_nav_wrap ul{
+	list-style:none;
+	float:left;
+	margin:0;
+	padding:0;
+	background-color: rgb(197, 6, 6);
+}
+
+#primary_nav_wrap ul a{
+	display:block;
+	color:white;
+	text-decoration:none;
+	font-weight:700;
+	font-size:16px; /* Aumenta el tamaño de la fuente */
+	line-height:40px; /* Aumenta la altura de la línea */
+	padding:0 20px; /* Ajusta el padding si es necesario */
+	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    transition: transform 0.3s ease, margin 0.3s ease; /* Aplica la transición */
+}
+
+#primary_nav_wrap ul li{
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0
+}
+
+#primary_nav_wrap ul li.current-menu-item{
+	background:rgb(197, 6, 6);
+}
+
+#primary_nav_wrap ul li:hover{
+	background:rgb(197, 6, 6);
+}
+
+#primary_nav_wrap ul ul{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:rgb(197, 6, 6);
+	padding:0
+}
+
+#primary_nav_wrap ul ul li{
+	float:none;
+	width:200px
+}
+
+#primary_nav_wrap ul ul a{
+	line-height:140%; /* Ajusta la altura de la línea para los submenús */
+	padding:12px 20px; /* Ajusta el padding si es necesario */
+    transition: transform 0.3s ease, margin 0.3s ease; /* Aplica la transición */
+}
+
+#primary_nav_wrap ul ul ul{
+	top:0;
+	left:100%
+}
+
+#primary_nav_wrap ul li:hover > ul{
+	display:block
+}
+
+#primary_nav_wrap ul li a {
+    transition: transform 0.3s ease, margin 0.3s ease;
+}
+
+#primary_nav_wrap ul li:hover a {
+    transform: scale(1.1);
+    margin-left: -10px;
+    margin-right: -10px;
+}
